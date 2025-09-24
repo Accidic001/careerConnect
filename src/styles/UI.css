@@ -128,3 +128,45 @@
   color: var(--gray-500);
   cursor: not-allowed;
 }
+
+/* ===== MOBILE UI COMPONENTS ===== */
+
+/* Mobile form elements */
+@media (max-width: 768px) {
+  .search-input {
+    padding: var(--space-4) var(--space-4) var(--space-4) var(--space-10);
+    font-size: var(--text-base);
+  }
+  
+  .select-input {
+    padding: var(--space-4);
+    font-size: var(--text-base);
+  }
+  
+  .btn {
+    padding: var(--space-4) var(--space-5);
+  }
+}
+
+/* Small mobile form adjustments */
+@media (max-width: 480px) {
+  .select-filter {
+    gap: var(--space-1);
+  }
+  
+  .select-label {
+    font-size: var(--text-xs);
+  }
+  
+  .search-input::placeholder {
+    font-size: var(--text-sm);
+  }
+}
+
+/* Button stack on mobile */
+@media (max-width: 480px) {
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

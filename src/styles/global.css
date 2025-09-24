@@ -113,3 +113,54 @@ a:focus-visible {
   outline-offset: 2px;
   border-radius: var(--radius-sm);
 }
+
+/* ===== RESPONSIVE DESIGN ===== */
+/* Mobile-First Approach */
+
+/* Base container for mobile */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+}
+
+/* Prevent horizontal scrolling on mobile */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Touch-friendly tap targets for mobile */
+@media (max-width: 768px) {
+  button, 
+  .btn,
+  a.nav-link,
+  .apply-button {
+    min-height: 44px;
+    min-width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Prevent zoom on iOS input focus */
+  input, select, textarea {
+    font-size: 16px;
+  }
+}
+
+/* Fluid typography for better scaling */
+.hero-title {
+  font-size: clamp(var(--text-2xl), 5vw, var(--text-4xl));
+}
+
+.hero-subtitle {
+  font-size: clamp(var(--text-base), 2.5vw, var(--text-lg));
+}
+
+/* Responsive spacing utilities */
+@media (max-width: 768px) {
+  .mobile-p-4 { padding: var(--space-4); }
+  .mobile-p-6 { padding: var(--space-6); }
+  .mobile-mb-4 { margin-bottom: var(--space-4); }
+}

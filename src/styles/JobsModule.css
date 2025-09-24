@@ -1,3 +1,5 @@
+
+
 /* Jobs Hero */
 .jobs-hero {
   background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
@@ -379,4 +381,126 @@
 
 .no-results-content p {
   color: var(--gray-500);
+}
+
+
+/* ===== MOBILE JOBS MODULE ===== */
+
+/* Mobile Hero Section */
+@media (max-width: 640px) {
+  .jobs-hero {
+    padding: var(--space-8) 0;
+  }
+  
+  .hero-content {
+    padding: 0 var(--space-4);
+  }
+  
+  .hero-stats {
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+  
+  .stat {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-3);
+  }
+  
+  .stat-number {
+    font-size: var(--text-xl);
+    margin-bottom: 0;
+  }
+}
+
+/* Mobile Filters Enhancement */
+@media (max-width: 480px) {
+  .jobs-filters-section {
+    padding: var(--space-6) 0;
+  }
+  
+  .filters-header h2 {
+    font-size: var(--text-xl);
+  }
+  
+  .filters-grid {
+    gap: var(--space-3);
+  }
+}
+
+/* Mobile Job Cards - Enhanced for small screens */
+@media (max-width: 480px) {
+  .job-card {
+    padding: var(--space-4);
+    margin: 0 var(--space-2);
+  }
+  
+  .company-info {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-3);
+  }
+  
+  .company-avatar {
+    align-self: center;
+  }
+  
+  .job-meta {
+    justify-content: center;
+  }
+  
+  .job-card-footer {
+    flex-direction: column;
+    gap: var(--space-3);
+    text-align: center;
+  }
+  
+  .job-badge {
+    position: static;
+    margin-bottom: var(--space-3);
+    align-self: flex-end;
+  }
+}
+
+/* Tablet-specific job grid */
+@media (min-width: 641px) and (max-width: 968px) {
+  .jobs-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+  }
+  
+  .job-card {
+    padding: var(--space-5);
+  }
+}
+
+/* Large mobile devices (landscape) */
+@media (max-width: 768px) and (orientation: landscape) {
+  .jobs-hero {
+    padding: var(--space-6) 0;
+  }
+  
+  .hero-stats {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+/* Very small devices */
+@media (max-width: 360px) {
+  .job-card {
+    padding: var(--space-3);
+  }
+  
+  .job-title {
+    font-size: var(--text-base);
+  }
+  
+  .company-name {
+    font-size: var(--text-sm);
+  }
+  
+  .job-description {
+    -webkit-line-clamp: 3;
+  }
 }
